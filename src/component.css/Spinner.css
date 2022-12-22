@@ -1,0 +1,8 @@
+.spin img {
+    width: 7rem;
+    height: 5rem;
+    opacity: 50%;
+    margin: 0.5rem;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
+}
