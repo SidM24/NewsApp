@@ -11,7 +11,7 @@ export default class Navbar extends Component {
                     <div>
                         <div style={{ justifyContent: 'center', display: 'flex' }}>
                             <Link className="navbar-brand" to="/">
-                                <img src={logo} alt='CurrentWave' style={{ height: '6rem', width: '8rem' }} />
+                                <img src={logo} alt='CurrentWave' style={{ width: '15vh' }} />
                             </Link>
                             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                                 <span className="navbar-toggler-icon"></span>
