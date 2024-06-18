@@ -7,6 +7,8 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default class News extends Component {
 
+
+
     static defaultProps = {
         country: "in",
         pageSize: 8,
@@ -30,16 +32,9 @@ export default class News extends Component {
         }
     }
 
-    // async updateNews() {
-    //     let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8acd9102e3884b50b1ca12c44199aa8e&page=${this.state.page}&pageSize=${this.props.pageSize}`
-    //     this.setState({ loading: true })
-    //     let data = await fetch(url)
-    //     let parsedData = await data.json()
-    //     this.setState({ articles: parsedData.articles, totalResults: parsedData.totalResults, loading: false })
-    // }
-
     async componentDidMount() {
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8acd9102e3884b50b1ca12c44199aa8e&page=${this.state.page}&pageSize=${this.props.pageSize}`
+        const api_key = process.env.REACT_APP_NEWS_API_KEY;
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api_key}&page=${this.state.page}&pageSize=${this.props.pageSize}`
         this.setState({ loading: true })
         let data = await fetch(url)
         let parsedData = await data.json()
@@ -50,10 +45,11 @@ export default class News extends Component {
             // page: parsedData.page
         })
     }
-
+    
     fetchMoreData = async () => {
+        const api_key = process.env.REACT_APP_NEWS_API_KEY;
         this.setState({ page: this.state.page + 1 })
-        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=8acd9102e3884b50b1ca12c44199aa8e&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
+        let url = `https://newsapi.org/v2/top-headlines?country=${this.props.country}&category=${this.props.category}&apiKey=${api_key}&page=${this.state.page + 1}&pageSize=${this.props.pageSize}`
         this.setState({ loading: true })
         let data = await fetch(url)
         let parsedData = await data.json()
