@@ -40,6 +40,8 @@ To get started with the Daily News App, follow these steps:
    npm run start
    ```
 
+   ***Plese note that the webpage is viewable only through local host due to restrictions from the API owner***
+
 ## Contribution
 
 Contributions are welcome! If you have any suggestions or improvements, please open an issue or create a pull request.
@@ -54,3 +56,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 - The React community for their extensive documentation and support.
 
 Thank you for checking out the Current Wave News App! I hope you find it useful and enjoy using it as much as I enjoyed building it.
+
+## **Sample Preview of the Webpage**
+
+![HomePagePreview](HomePagePreview.png)
