@@ -54,6 +54,7 @@ const UpdatedNewsComponent = (props) => {
         }
         loadInitialArticles();
         fetchMoreArticles();
+        fetchMoreArticles();
     }, [])
 
     /* eslint-enable */
