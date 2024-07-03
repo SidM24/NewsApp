@@ -21,7 +21,6 @@ const UpdatedNewsComponent = (props) => {
         const api_key = localStorage.getItem('apiToken')
         let url = `https://api.thenewsapi.com/v1/news/top?api_token=${api_key}&locale=${props.country}&limit=3&categories=${props.category}&page=${page}`
         let data = await fetch(url)
-        console.log(data)
         if (!data.ok) {
             let new_url = '/newUser'
             // let new_url = `/old${location.pathname}`
@@ -47,7 +46,7 @@ const UpdatedNewsComponent = (props) => {
     /* eslint-disable */
 
     useEffect(() => {
-        
+
         const loadInitialArticles = async () => {
             const parsedData = await fetchArticles(page)
             setArticles(parsedData.data)
