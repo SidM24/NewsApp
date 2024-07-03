@@ -7,11 +7,11 @@ import InfiniteScroll from 'react-infinite-scroll-component';
 
 export default class News extends Component {
 
-
+    //Variable to keep track of the current path name
 
     static defaultProps = {
         country: "in",
-        pageSize: 8,
+        pageSize: 9,
         category: "general"
     }
 
@@ -31,6 +31,8 @@ export default class News extends Component {
             totalResults: 0,
         }
     }
+    // Below api is for the headlines`
+    // https://api.thenewsapi.com/v1/news/headlines?locale=us&language=en&api_token=53nA5srtdjmXlzBANVPc0l3Ostww5PMQyvnAeL3T
 
     async componentDidMount() {
         const api_key = process.env.REACT_APP_NEWS_API_KEY;
@@ -41,11 +43,10 @@ export default class News extends Component {
         this.setState({
             articles: parsedData.articles,
             totalResults: parsedData.totalResults,
-            loading: false,
-            // page: parsedData.page
+            loading: false
         })
     }
-    
+
     fetchMoreData = async () => {
         const api_key = process.env.REACT_APP_NEWS_API_KEY;
         this.setState({ page: this.state.page + 1 })

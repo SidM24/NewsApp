@@ -1,12 +1,12 @@
 import React, { Component } from 'react'
-import loading from './Loading_icon.gif'
-// import '../component.css/Spinner.css'
 
 export default class Spinner extends Component {
   render() {
     return (
-      <div className='text-center spin'>
-        <img src={loading} alt="loading" />
+      <div className='text-center' style={{ position: 'absolute', left: '50%' }} >
+        <div class="spinner-border" role="status" style={{height:'4rem',width:'4rem',fontWeight:'bold'}}>
+          <span class="sr-only">Loading...</span>
+        </div>
       </div>
     )
   }

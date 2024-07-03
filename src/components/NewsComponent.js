@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import '../componentCSS/NewsComponent.css'
 
 export default class NewsComponent extends Component {
     render() {
@@ -10,7 +11,7 @@ export default class NewsComponent extends Component {
                         <div className="cardImage" style={{ height: '60%', width: '100%', display: 'flex', justifyContent: 'center' }}>
                             <img src={imageUrl} className="card-img-top" alt="" style={{ maxHeight: '100%', width: 'auto', maxWidth: '100%', borderRadius: '0.2rem', marginTop: '0.2rem' }} />
                         </div>
-                        <div className="NewsTitleAndDescription" style={{ height: '38%', overflow: "hidden", padding: '0.46rem' ,paddingLeft:'1rem',paddingRight:'1rem'}}>
+                        <div className="NewsTitleAndDescription" style={{ height: '38%', overflow: "auto", padding: '0.46rem' ,paddingLeft:'1rem',paddingRight:'1rem'}}>
                             <h5 className="card-title" style={{ color: 'black' }}>{title}</h5>
                             <p className="card-text" style={{ color: 'gray' }}>{description}</p>
                         </div>
