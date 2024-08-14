@@ -60,3 +60,7 @@ Thank you for checking out the Current Wave News App! I hope you find it useful 
 ## **Sample Preview of the Webpage**
 
 ![HomePagePreview](HomePagePreview.png)
+
+#### Sample Preview
+
+Click [here](https://currentwave.netlify.app/) to check out the preview of the Current Wave!!
